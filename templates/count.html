@@ -1,0 +1,21 @@
+<h1>Counter</h1>
+
+<h1>Number of Words: {{count}}</h1>
+
+<h1>Your text: </h1>
+{{fulltext}}
+<h2>
+{% for words,counter in sortedWords %}
+{{words}}
+<br>
+{{counter}}
+<br>
+{% endfor %}
+</h2>
+<br>
+
+<h2><a href="{% url 'about' %}">About this</ahref></h2>
+<br>
+<form action= "{% url 'homepage' %}">
+<input type="submit" value="GO to home"/>
+</form>
